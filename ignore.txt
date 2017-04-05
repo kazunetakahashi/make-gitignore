@@ -1,0 +1,14 @@
+### ignored files in my environment ###
+
+# Ignore other unneeded files.
+*.swp
+.project
+.DS_Store
+.idea
+.secret
+
+# Ignore Emacs' temp files.
+\#*\#
+.\#*
+*~
+._*
