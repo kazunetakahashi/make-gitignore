@@ -52,3 +52,24 @@ build-iPhoneSimulator/
 .rvmrc
 
 
+
+### ignored files in my environment ###
+
+# Ignore other unneeded files.
+*.swp
+.project
+.DS_Store
+.idea
+.secret
+
+# Ignore Emacs' temp files.
+\#*\#
+.\#*
+*~
+._*
+*_flymake.*
+
+# Ignore given input/output files in contests.
+*.in
+*.out
+
