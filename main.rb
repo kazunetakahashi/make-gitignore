@@ -3,14 +3,16 @@ def make_gitignore(file, does_init, str)
     `git init`
     `git commit --allow-empty -m "initial empty commit"`
   end
-  `gibo #{str} > .gitignore`
+  if !(str.nil? || str.to_s == "")
+    `gibo dump #{str} > .gitignore`
+  end
   if File.exist?(file)
     open(".gitignore", 'a'){|output|
       open(file) {|input|
         output.puts("\n")
         output.write(input.read)
       }
-    }    
+    }
   end
   `git add .gitignore`
   `git commit -m "add .gitignore by gibo"`
